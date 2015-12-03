@@ -1,4 +1,4 @@
-package com.diegusweb.mediform;
+package com.diegusweb.mediform.ui.fragments;
 
 
 import android.os.Bundle;
@@ -12,7 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.diegusweb.mediform.adapters.AdaptadorInicio;
+import com.diegusweb.mediform.R;
+import com.diegusweb.mediform.ui.adapters.AdaptadorInicio;
 
 
 /**
