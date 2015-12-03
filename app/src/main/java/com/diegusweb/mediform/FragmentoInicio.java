@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.diegusweb.mediform.adapters.AdaptadorInicio;
 
@@ -43,6 +44,15 @@ public class FragmentoInicio extends Fragment {
         reciclador.setLayoutManager(new GridLayoutManager(getActivity(), NUM_COLUMNS));
 
         adaptador = new AdaptadorInicio();
+        adaptador.setOnItemClickListener(new AdaptadorInicio.OnItemClickListener() {
+            @Override
+            public void onItemClick(View itemView, int position) {
+                String name = adaptador.getItem(position).getNombre();
+                //int id = adaptador.getItem(position).getIdTransport();
+                Toast.makeText(getActivity(), "diego was clicked! " + "- " + name, Toast.LENGTH_SHORT).show();
+
+            }
+        });
         reciclador.setAdapter(adaptador);
         return view;
     }

@@ -1,5 +1,6 @@
 package com.diegusweb.mediform.adapters;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +17,18 @@ import com.diegusweb.mediform.models.Comida;
  */
 public class AdaptadorInicio extends RecyclerView.Adapter<AdaptadorInicio.ViewHolder> {
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    // Define listener member variable
+    private OnItemClickListener listener;
+    // Define the listener interface
+    public interface OnItemClickListener {
+        void onItemClick(View itemView, int position);
+    }
+    // Define the method that allows the parent activity or fragment to define the listener
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
+    }
+
+    public  class ViewHolder extends RecyclerView.ViewHolder {
         // Campos respectivos de un item
         public TextView nombre;
         public TextView precio;
@@ -27,6 +39,15 @@ public class AdaptadorInicio extends RecyclerView.Adapter<AdaptadorInicio.ViewHo
             nombre = (TextView) v.findViewById(R.id.nombre_comida);
             //precio = (TextView) v.findViewById(R.id.precio_comida);
             imagen = (ImageView) v.findViewById(R.id.miniatura_comida);
+
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Triggers click upwards to the adapter on click
+                    if (listener != null)
+                        listener.onItemClick(v, getLayoutPosition());
+                }
+            });
         }
     }
 
@@ -56,5 +77,9 @@ public class AdaptadorInicio extends RecyclerView.Adapter<AdaptadorInicio.ViewHo
     @Override
     public int getItemCount() {
         return Comida.COMIDAS_POPULARES.size();
+    }
+
+    public Comida getItem(int position) {
+        return Comida.COMIDAS_POPULARES.get(position);
     }
 }

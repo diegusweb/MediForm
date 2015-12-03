@@ -21,6 +21,8 @@
         android:layout_height="78dp"
         android:layout_gravity="bottom"
         android:gravity="center"
+        android:background="@color/accentTransparent"
+        android:textColor="@color/color_light"
         android:textStyle="bold"
         android:text="Pink Floyd"/>
 
