@@ -4,6 +4,7 @@ package com.diegusweb.mediform;
 import android.os.Bundle;
 
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ import com.diegusweb.mediform.adapters.AdaptadorInicio;
  */
 public class FragmentoInicio extends Fragment {
 
+    public static final int NUM_COLUMNS = 2;
 
     private RecyclerView reciclador;
     private LinearLayoutManager layoutManager;
@@ -38,7 +40,7 @@ public class FragmentoInicio extends Fragment {
 
         reciclador = (RecyclerView) view.findViewById(R.id.reciclador);
         layoutManager = new LinearLayoutManager(getActivity());
-        reciclador.setLayoutManager(layoutManager);
+        reciclador.setLayoutManager(new GridLayoutManager(getActivity(), NUM_COLUMNS));
 
         adaptador = new AdaptadorInicio();
         reciclador.setAdapter(adaptador);
