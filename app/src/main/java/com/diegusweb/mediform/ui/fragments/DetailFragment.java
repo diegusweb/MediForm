@@ -13,18 +13,10 @@ import com.diegusweb.mediform.R;
  * A simple {@link Fragment} subclass.
  */
 public class DetailFragment extends Fragment {
-
-
-    public static final String TAG = "MainFragment";
+    
 
     public DetailFragment() {
         // Required empty public constructor
-    }
-
-    public static DetailFragment newInstance(Bundle params){
-        DetailFragment mf = new DetailFragment();
-        mf.setArguments(params);
-        return mf;
     }
 
 

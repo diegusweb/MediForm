@@ -17,7 +17,7 @@
 
     <fragment
         android:name="com.diegusweb.mediform.ui.fragments.DetailFragment"
-        android:id="@+id/fooFragment"
+        android:id="@+id/formulaContent"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
