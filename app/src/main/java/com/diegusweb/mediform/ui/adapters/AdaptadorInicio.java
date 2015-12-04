@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.diegusweb.mediform.R;
-import com.diegusweb.mediform.models.Comida;
+import com.diegusweb.mediform.models.Formulas;
 
 /**
  * Created by diego.rueda on 12/3/2015.
@@ -63,7 +63,7 @@ public class AdaptadorInicio extends RecyclerView.Adapter<AdaptadorInicio.ViewHo
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
-        Comida item = Comida.COMIDAS_POPULARES.get(position);
+        Formulas item = Formulas.COMIDAS_POPULARES.get(position);
 
         Glide.with(viewHolder.itemView.getContext())
                 .load(item.getIdDrawable())
@@ -75,10 +75,10 @@ public class AdaptadorInicio extends RecyclerView.Adapter<AdaptadorInicio.ViewHo
 
     @Override
     public int getItemCount() {
-        return Comida.COMIDAS_POPULARES.size();
+        return Formulas.COMIDAS_POPULARES.size();
     }
 
-    public Comida getItem(int position) {
-        return Comida.COMIDAS_POPULARES.get(position);
+    public Formulas getItem(int position) {
+        return Formulas.COMIDAS_POPULARES.get(position);
     }
 }
