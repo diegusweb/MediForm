@@ -25,18 +25,14 @@ public class DetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-
-
        // return inflater.inflate(R.layout.fragment_detail, container, false);
 
         View root = inflater.inflate(R.layout.fragment_detail, container, false);
 
         Constants.totleForm = "Ni modo";
         TextView article = (TextView) root.findViewById(R.id.textView1);
-        article.setText("ssssssssssss");
+        article.setText("demo listado");
 
-        // setDummyContent();
         return root;
     }
 
