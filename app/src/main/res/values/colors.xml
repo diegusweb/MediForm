@@ -3,13 +3,14 @@
     <color name="window_background">#ffffff</color>
 
     <color name="primaryDarkColor">#323232</color>
-    <color name="primaryColor">#484848</color>
+    <color name="buttonColor">#0277bd</color>
+    <color name="primaryColor">#01579b</color>
     <color name="accentColor">#F87652</color>
-    <color name="accentTransparent">#FF0000</color>
+    <color name="accentTransparent">#29b6f6</color>
     <color name="background_footer_item_grid_categorias">#90000000</color>
 
     <color name="color_light">#ffffff</color>
 
-    <color name="background_header_seccion_inicio">#4B4B4B</color>
+    <color name="background_header_seccion_inicio">#0288d1</color>
 
 </resources>

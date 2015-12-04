@@ -1,6 +1,7 @@
 package com.diegusweb.mediform.ui.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.support.v4.app.Fragment;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.diegusweb.mediform.R;
+import com.diegusweb.mediform.ui.activities.DetailActivity;
 import com.diegusweb.mediform.ui.adapters.AdaptadorInicio;
 
 
@@ -52,11 +54,20 @@ public class FragmentoInicio extends Fragment {
                 //int id = adaptador.getItem(position).getIdTransport();
                 Toast.makeText(getActivity(), "diego was clicked! " + "- " + name, Toast.LENGTH_SHORT).show();
 
+                Intent i = new Intent(getActivity(), DetailActivity.class);
+                //i.putExtra("STRING_I_NEED", id);
+
+                startActivity(i);
+
+
+
             }
         });
         reciclador.setAdapter(adaptador);
         return view;
     }
+
+
 
 
 }
